@@ -1,0 +1,87 @@
+{
+	"version": 1,
+	"settings": {
+		"appearanceTools": true,
+		"color": {
+			"palette": [
+				{
+					"slug": "foreground",
+					"color": "#0D0E09",
+					"name": "Foreground"
+				},
+				{
+					"slug": "background",
+					"color": "#F1EFF0",
+					"name": "Background"
+				},
+				{
+					"slug": "primary",
+					"color": "#FECC38",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "#5D2D48",
+					"name": "Secondary"
+				},
+				{
+					"slug": "tertiary",
+					"color": "#2F5539",
+					"name": "Tertiary"
+				}
+			]
+		},
+		"custom": {
+			"typography": {
+				"font-size": {
+					"huge": "clamp(2rem, 4vw, 2.5rem)",
+					"gigantic": "clamp(2.6rem, 6vw, 3rem)",
+					"colossal": "clamp(3.25rem, 8vw, 4.25rem)"
+				}
+			}
+		},
+		"typography": {
+			"fontSizes": [
+				{
+					"size": "1rem",
+					"slug": "small"
+				},
+				{
+					"size": "clamp(1.2rem, 3vw, 1.3rem)",
+					"slug": "medium"
+				},
+				{
+					"size": "clamp(1.4rem, 2vw, 1.6rem)",
+					"slug": "large"
+				},
+				{
+					"size": "clamp(1.75rem, 3vw, 2.25rem)",
+					"slug": "x-large"
+				}
+			]
+		}
+	},
+	"styles": {
+		"blocks": {
+			"core/post-title": {
+				"typography": {
+					"fontWeight": "500"
+				}
+			},
+			"core/post-excerpt": {
+				"typography": {
+					"fontWeight": "500"
+				}
+			}
+		},
+		"elements": {
+			"h2": {
+				"spacing": {
+					"padding": {
+						"top": "var(--wp--custom--spacing--medium)"
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,89 @@
+/*
+Theme Name: Doing the Doughnut
+Theme URI: https://doingthedoughnut.tech
+Author: Hannah Smith
+Author URI: https://opcan.co.uk
+Description: A super quick child theme for TT2.
+Requires at least: 5.8
+Tested up to: 5.9
+Requires PHP: 5.6
+Version: 0.2
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Template: twentytwentytwo
+Text Domain: dtd
+
+Twenty Twenty-Two Child WordPress Theme, (C) 2021 WordPress.org
+Twenty Twenty-Two Child is distributed under the terms of the GNU GPL.
+*/
+
+
+/* 1. LAYOUT                */
+/* 2. HEADER                */
+
+/* 10. CTPS                 */
+/* 10A. SOCIAL AND ECO      */
+/* 10B. SOCIAL              */
+/* 10C. ECO                 */
+
+
+
+/* 1. LAYOUT                */
+.wp-site-blocks header {
+	margin-bottom: 3rem;
+}
+
+.entry-content {
+	padding-bottom: 3rem;
+}
+.entry-content > h2:first-of-type {
+	padding-top: 0;
+}
+
+
+
+/* 2. HEADER                */
+header h1 a {
+	color: var(--wp--preset--color--foreground) !important;
+}
+
+
+
+/* 10. CTPS                 */
+/* 10A. SOCIAL AND ECO      */
+.post-type-archive-social h2,
+.post-type-archive-ecological h2 {
+	padding-top: 3rem;
+	margin-bottom: 0;
+}
+
+.single-social .wp-block-post-excerpt,
+.single-ecological .wp-block-post-excerpt  {
+	padding-bottom: 2rem;
+}
+
+
+
+/* 10B. SOCIAL              */
+.post-type-archive-social .wp-block-query-title,
+.post-type-archive-social .wp-block-post-title a,
+.single-social .wp-block-post-title {
+	color: var(--wp--preset--color--secondary);
+	font-weight: 500;
+}
+.single-social .view-more-link {
+	color: var(--wp--preset--color--secondary);
+}
+
+
+/* 10C. ECO                 */
+.post-type-archive-ecological .wp-block-query-title,
+.post-type-archive-ecological .wp-block-post-title a,
+.single-ecological .wp-block-post-title {
+	color: var(--wp--preset--color--tertiary);
+	font-weight: 500;
+}
+.single-ecological .view-more-link {
+	color: var(--wp--preset--color--tertiary);
+}
+
