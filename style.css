@@ -26,6 +26,9 @@ Twenty Twenty-Two Child is distributed under the terms of the GNU GPL.
 /* 10B. SOCIAL              */
 /* 10C. ECO                 */
 
+/* 20. VENDOR               */
+/* 20A. ACCORDION BLOCK     */
+
 
 
 /* 1. LAYOUT                */
@@ -71,6 +74,8 @@ header h1 a {
 	color: var(--wp--preset--color--secondary);
 	font-weight: 500;
 }
+.single-social h2,
+.single-social h3,
 .single-social .view-more-link {
 	color: var(--wp--preset--color--secondary);
 }
@@ -87,3 +92,12 @@ header h1 a {
 	color: var(--wp--preset--color--tertiary);
 }
 
+
+
+/* 20. VENDOR               */
+/* 20A. ACCORDION BLOCK     */
+
+.c-accordion__title::after {
+	color: inherit;
+	font-weight: inherit;
+}

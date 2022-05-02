@@ -76,9 +76,42 @@
 		},
 		"elements": {
 			"h2": {
+				"typography": {
+					"fontWeight": "400"
+				},
 				"spacing": {
 					"padding": {
 						"top": "var(--wp--custom--spacing--medium)"
+					}
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontWeight": "400"
+				}
+			},
+			"h4": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--system-font)",
+					"fontSize": "var(--wp--preset--font-size--large)",
+					"fontWeight": "500"
+				},
+				"spacing": {
+					"padding": {
+						"top": "1rem"
+					}
+				}
+			},
+			"h5": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--system-font)",
+					"fontSize": "var(--wp--preset--font-size--medium)",
+					"fontWeight": "500",
+					"textTransform": "none"
+				},
+				"spacing": {
+					"padding": {
+						"top": "1rem"
 					}
 				}
 			}
