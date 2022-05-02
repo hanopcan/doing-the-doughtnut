@@ -20,6 +20,7 @@ Twenty Twenty-Two Child is distributed under the terms of the GNU GPL.
 
 /* 1. LAYOUT                */
 /* 2. HEADER                */
+/* 3. ENTRY CONTENT         */
 
 /* 10. CTPS                 */
 /* 10A. SOCIAL AND ECO      */
@@ -39,9 +40,7 @@ Twenty Twenty-Two Child is distributed under the terms of the GNU GPL.
 .entry-content {
 	padding-bottom: 3rem;
 }
-.entry-content > h2:first-of-type {
-	padding-top: 0;
-}
+
 
 
 
@@ -49,6 +48,14 @@ Twenty Twenty-Two Child is distributed under the terms of the GNU GPL.
 header h1 a {
 	color: var(--wp--preset--color--foreground) !important;
 }
+
+
+/* 3. ENTRY CONTENT         */
+.entry-content ul li {
+	margin-bottom: 1rem;
+}
+
+
 
 
 

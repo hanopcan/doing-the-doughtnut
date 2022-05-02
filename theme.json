@@ -66,6 +66,11 @@
 			"core/post-title": {
 				"typography": {
 					"fontWeight": "500"
+				},
+				"spacing": {
+					"margin": {
+						"bottom": "2rem"
+					}
 				}
 			},
 			"core/post-excerpt": {
