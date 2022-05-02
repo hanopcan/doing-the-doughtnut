@@ -53,9 +53,20 @@ header h1 a {
 
 
 /* 3. ENTRY CONTENT         */
-.entry-content ul li {
+
+/* Any bullet point in content area. */
+.entry-content > ul li {
+	margin-bottom: 0.8rem;
+}
+/* Parent bullet points only. */
+.entry-content > ul > li {
 	margin-bottom: 1rem;
 }
+/* Sub-point lists */
+.entry-content > ul > li ul {
+	margin-top: 0.5rem;
+}
+
 
 
 
