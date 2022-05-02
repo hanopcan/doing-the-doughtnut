@@ -38,6 +38,41 @@ function register_cpt_social() {
 		'public'          => true,
 		'has_archive'     => true,
 		'show_in_rest'    => true,
+		'template'        => array(
+			array(
+				'core/heading',
+				array(
+					'content' => 'A global overview',
+					'level'   => '2',
+				),
+			),
+			array(
+				'core/paragraph',
+				array(
+					'placeholder' => 'One line summary in bold',
+				),
+			),
+			array(
+				'core/paragraph',
+				array(
+					'placeholder' => 'Summary paragraph',
+				),
+			),
+			array(
+				'core/heading',
+				array(
+					'content' => 'Relevance to digital tech',
+					'level'   => '2',
+				),
+			),
+			array(
+				'core/heading',
+				array(
+					'content' => 'Relevance to digital tech',
+					'level'   => '3',
+				),
+			),
+		),
 		'supports'        => array( 'title', 'editor', 'excerpt', 'thumbnail' ),
 		'taxonomies'      => array( 'versions' ),
 		'rewrite'         => array(
