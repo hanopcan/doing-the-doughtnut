@@ -28,6 +28,29 @@ Twenty Twenty-Two Child is distributed under the terms of the GNU GPL.
 /* 10B. SOCIAL              */
 /* 10C. ECO                 */
 
+/* 11. LIST STYLING         */
+ul.list__tech-workforce,
+ul.list__global-pop {
+	padding-left: 0;
+}
+
+.list__tech-workforce > li,
+.list__global-pop > li {
+	list-style-type: none;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	padding: 1rem;
+}
+
+.list__global-pop > li {
+	background-color: rgba(93, 45, 72, 0.1 );
+}
+.list__tech-workforce > li {
+	background-color: rgba(93, 45, 72, 0.2 );	
+}
+
+/* 15. BLOCKS               */
+
 /* 20. VENDOR               */
 /* 20A. ACCORDION BLOCK     */
 
@@ -120,6 +143,13 @@ footer .wp-block-query .wp-block-post h5 {
 }
 .single-ecological .view-more-link {
 	color: var(--wp--preset--color--tertiary);
+}
+
+
+/* 15. BLOCKS               */
+.entry-content > .has-background {
+	margin-top: var(--wp--custom--spacing--medium);
+	padding-bottom: var(--wp--custom--spacing--medium);
 }
 
 
