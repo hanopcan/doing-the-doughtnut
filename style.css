@@ -29,25 +29,6 @@ Twenty Twenty-Two Child is distributed under the terms of the GNU GPL.
 /* 10C. ECO                 */
 
 /* 11. LIST STYLING         */
-ul.list__tech-workforce,
-ul.list__global-pop {
-	padding-left: 0;
-}
-
-.list__tech-workforce > li,
-.list__global-pop > li {
-	list-style-type: none;
-	margin-top: 1rem;
-	margin-bottom: 1rem;
-	padding: 1rem;
-}
-
-.list__global-pop > li {
-	background-color: rgba(93, 45, 72, 0.1 );
-}
-.list__tech-workforce > li {
-	background-color: rgba(93, 45, 72, 0.2 );	
-}
 
 /* 15. BLOCKS               */
 
@@ -60,6 +41,11 @@ ul.list__global-pop {
 .wp-site-blocks header {
 	margin-bottom: 3rem;
 }
+header > .wp-block-group,
+footer > .wp-block-group {
+	padding-left: var(--wp--custom--spacing--outer) !important;
+	padding-right: var(--wp--custom--spacing--outer) !important;
+}
 
 .entry-content {
 	padding-bottom: 3rem;
@@ -69,6 +55,7 @@ ul.list__global-pop {
 
 
 /* 2. HEADER                */
+
 header h1 a {
 	color: var(--wp--preset--color--foreground) !important;
 }
@@ -141,9 +128,43 @@ footer .wp-block-query .wp-block-post h5 {
 	color: var(--wp--preset--color--tertiary);
 	font-weight: 500;
 }
+.single-ecological h2,
+.single-ecological h3,
 .single-ecological .view-more-link {
 	color: var(--wp--preset--color--tertiary);
 }
+
+
+/* 11. LIST STYLING         */
+ul.list__tech-workforce,
+ul.list__global-pop {
+	padding-left: 0;
+}
+
+.list__tech-workforce > li,
+.list__global-pop > li {
+	list-style-type: none;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	padding: 1rem;
+}
+
+/* Social colour scheme */
+.single-social .list__global-pop > li {
+	background-color: rgba(93, 45, 72, 0.1 );
+}
+.single-social .list__tech-workforce > li {
+	background-color: rgba(93, 45, 72, 0.2 );	
+}
+
+/* Ecological colour scheme */
+.single-ecological .list__global-pop > li {
+	background-color: rgba(47, 85, 57, 0.1 );
+}
+.single-ecological .list__tech-workforce > li {
+	background-color: rgba(47, 85, 57, 0.2 );	
+}
+
 
 
 /* 15. BLOCKS               */
