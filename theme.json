@@ -1,5 +1,21 @@
 {
 	"version": 1,
+	"customTemplates": [
+		{
+			"name": "single-social",
+			"title": "Single social post",
+			"postTypes": [
+				"social"
+			]
+		},
+		{
+			"name": "single-ecological",
+			"title": "Single ecological post",
+			"postTypes": [
+				"ecological"
+			]
+		}
+	],
 	"settings": {
 		"appearanceTools": true,
 		"color": {
