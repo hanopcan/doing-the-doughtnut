@@ -7,8 +7,12 @@ add_action( 'init', 'register_cpt_ecological' );
 /* REGISTER TAXONOMIES                   */
 add_action( 'init', 'create_versions_taxonomy' );
 
-/* CUSTOMISE QUERIES */
+/* CUSTOMISE CPTS/QUERIES */
 add_action( 'pre_get_posts', 'social_adjust_queries' );
+add_action( 'pre_get_posts', 'ecological_adjust_queries' );
+
+add_filter( 'pre_get_document_title', 'social_archive_title', 1000 );
+add_filter( 'pre_get_document_title', 'ecological_archive_title', 1000 );
 
 
 
@@ -167,7 +171,7 @@ function create_versions_taxonomy() {
 }
 
 
-/* CUSTOMISE QUERIES */
+/* CUSTOMISE CPTS/QUERIES */
 
 /**
  * Adjust default social CPT query.
@@ -181,4 +185,49 @@ function social_adjust_queries( $query ) {
 		$query->set( 'orderby', 'title' );
 		$query->set( 'order', 'ASC' );
 	}
+}
+
+/**
+ * Adjust default ecological CPT query.
+ *
+ * @param object $query The WP_Query instance (passed by reference).
+ */
+function ecological_adjust_queries( $query ) {
+
+	if ( ! is_admin() && is_post_type_archive( 'ecological' ) ) {
+		$query->set( 'posts_per_page', '12' );
+		$query->set( 'orderby', 'title' );
+		$query->set( 'order', 'ASC' );
+	}
+}
+
+
+/**
+ * Amend browser tab title for social cpt.
+ *
+ * @param string $title browser tab title.
+ */
+function social_archive_title( $title ) {
+
+	if ( is_post_type_archive( 'social' ) ) {
+		$title = 'Social foundations - ' . get_bloginfo( 'name' );
+		return $title;
+	}
+
+	return $title;
+}
+
+/**
+ * Amend browser tab title for ecological cpt.
+ *
+ * @param string $title browser tab title.
+ */
+function ecological_archive_title( $title ) {
+
+	if ( is_post_type_archive( 'ecological' ) ) {
+		$title = 'Ecological ceilings - ' . get_bloginfo( 'name' );
+		return $title;
+	}
+
+	return $title;
 }
