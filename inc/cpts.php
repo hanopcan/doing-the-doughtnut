@@ -7,6 +7,11 @@ add_action( 'init', 'register_cpt_ecological' );
 /* REGISTER TAXONOMIES                   */
 add_action( 'init', 'create_versions_taxonomy' );
 
+/* CUSTOMISE QUERIES */
+add_action( 'pre_get_posts', 'social_adjust_queries' );
+
+
+
 
 /* REGISTER POSTS                        */
 
@@ -159,4 +164,21 @@ function create_versions_taxonomy() {
 			'show_in_rest' => true,
 		)
 	);
+}
+
+
+/* CUSTOMISE QUERIES */
+
+/**
+ * Adjust default social CPT query.
+ *
+ * @param object $query The WP_Query instance (passed by reference).
+ */
+function social_adjust_queries( $query ) {
+
+	if ( ! is_admin() && is_post_type_archive( 'social' ) ) {
+		$query->set( 'posts_per_page', '12' );
+		$query->set( 'orderby', 'title' );
+		$query->set( 'order', 'ASC' );
+	}
 }
