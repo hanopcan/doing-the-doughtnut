@@ -83,7 +83,7 @@ header h1 a {
 /* 4. FOOTER                */
 
 footer .wp-block-query .wp-block-post {
-	margin-top: 0.8rem;
+	margin-top: 0.5rem;
 }
 footer .wp-block-query .wp-block-post h5 {
 	padding-top: 0
@@ -108,8 +108,8 @@ footer .wp-block-query .wp-block-post h5 {
 
 
 /* 10B. SOCIAL              */
-.post-type-archive-social .wp-block-query-title,
-.post-type-archive-social .wp-block-post-title a,
+.post-type-archive-social main .wp-block-query-title,
+.post-type-archive-social main .wp-block-post-title a,
 .single-social .wp-block-post-title {
 	color: var(--wp--preset--color--secondary);
 	font-weight: 500;
@@ -122,8 +122,8 @@ footer .wp-block-query .wp-block-post h5 {
 
 
 /* 10C. ECO                 */
-.post-type-archive-ecological .wp-block-query-title,
-.post-type-archive-ecological .wp-block-post-title a,
+.post-type-archive-ecological main .wp-block-query-title,
+.post-type-archive-ecological main .wp-block-post-title a,
 .single-ecological .wp-block-post-title {
 	color: var(--wp--preset--color--tertiary);
 	font-weight: 500;
