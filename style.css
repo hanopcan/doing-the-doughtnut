@@ -41,8 +41,8 @@ Twenty Twenty-Two Child is distributed under the terms of the GNU GPL.
 .wp-site-blocks header {
 	margin-bottom: 3rem;
 }
-header > .wp-block-group,
-footer > .wp-block-group {
+.wp-site-blocks > header > .wp-block-group,
+.wp-site-blocks > footer > .wp-block-group {
 	padding-left: var(--wp--custom--spacing--outer) !important;
 	padding-right: var(--wp--custom--spacing--outer) !important;
 }
