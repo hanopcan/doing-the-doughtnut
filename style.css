@@ -23,6 +23,8 @@ Twenty Twenty-Two Child is distributed under the terms of the GNU GPL.
 /* 3. ENTRY CONTENT         */
 /* 4. FOOTER                */
 
+/* 9. PAGES                 */
+
 /* 10. CTPS                 */
 /* 10A. SOCIAL AND ECO      */
 /* 10B. SOCIAL              */
@@ -81,6 +83,9 @@ header h1 a {
 
 
 /* 4. FOOTER                */
+.wp-site-blocks > footer {
+	margin-top: 0;
+}
 
 footer .wp-block-query .wp-block-post {
 	margin-top: 0.5rem;
@@ -90,6 +95,10 @@ footer .wp-block-query .wp-block-post h5 {
 }
 
 
+/* 9. PAGES                 */
+.page .entry-content h2 {
+	padding-top: 1rem;
+}
 
 
 /* 10. CTPS                 */
