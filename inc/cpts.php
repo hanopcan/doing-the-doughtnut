@@ -180,7 +180,7 @@ function create_versions_taxonomy() {
  */
 function social_adjust_queries( $query ) {
 
-	if ( ! is_admin() && is_post_type_archive( 'social' ) ) {
+	if ( ! is_admin() ) {
 		$query->set( 'posts_per_page', '12' );
 		$query->set( 'orderby', 'title' );
 		$query->set( 'order', 'ASC' );
@@ -194,7 +194,7 @@ function social_adjust_queries( $query ) {
  */
 function ecological_adjust_queries( $query ) {
 
-	if ( ! is_admin() && is_post_type_archive( 'ecological' ) ) {
+	if ( ! is_admin() ) {
 		$query->set( 'posts_per_page', '12' );
 		$query->set( 'orderby', 'title' );
 		$query->set( 'order', 'ASC' );
