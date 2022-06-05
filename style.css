@@ -96,21 +96,22 @@ footer .wp-block-query .wp-block-post h5 {
 
 
 /* 9. PAGES                 */
-.page .entry-content h2 {
-	padding-top: 1rem;
+.page .entry-content > h2:first-of-type {
+	/* padding-top: 1rem; */
 }
 
 
 /* 10. CTPS                 */
 /* 10A. SOCIAL AND ECO      */
 .post-type-archive-social h2,
-.post-type-archive-ecological h2 {
+.post-type-archive-ecological h2,
+.post-type-archive-seven-ways h2 {
 	padding-top: 3rem;
 	margin-bottom: 0;
 }
 
 .single-social .wp-block-post-excerpt,
-.single-ecological .wp-block-post-excerpt  {
+.single-ecological .wp-block-post-excerpt {
 	padding-bottom: 2rem;
 }
 
@@ -144,14 +145,22 @@ footer .wp-block-query .wp-block-post h5 {
 }
 
 
+/* 10D. SEVEN WAYS          */
+.single-seven-ways .wp-block-post-content > h2:first-of-type {
+	padding-top: 0;
+}
+
+
 /* 11. LIST STYLING         */
 ul.list__tech-workforce,
-ul.list__global-pop {
+ul.list__global-pop,
+ul.list__seven-ways {
 	padding-left: 0;
 }
 
 .list__tech-workforce > li,
-.list__global-pop > li {
+.list__global-pop > li,
+.list__seven-ways > li {
 	list-style-type: none;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
@@ -172,6 +181,12 @@ ul.list__global-pop {
 }
 .single-ecological .list__tech-workforce > li {
 	background-color: rgba(47, 85, 57, 0.2 );	
+}
+
+/* Seven ways colour scheme */
+.page .list__seven-ways > li,
+.single-seven-ways .list__seven-ways > li {
+	background-color: rgba(254, 204, 56, 0.1 );
 }
 
 

@@ -109,6 +109,11 @@
 			"h3": {
 				"typography": {
 					"fontWeight": "400"
+				},
+				"spacing": {
+					"padding": {
+						"top": "2rem"
+					}
 				}
 			},
 			"h4": {

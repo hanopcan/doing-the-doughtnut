@@ -3,6 +3,7 @@
 /* REGISTER POSTS                        */
 add_action( 'init', 'register_cpt_social' );
 add_action( 'init', 'register_cpt_ecological' );
+add_action( 'init', 'register_cpt_seven_ways' );
 
 /* REGISTER TAXONOMIES                   */
 add_action( 'init', 'create_versions_taxonomy' );
@@ -10,6 +11,7 @@ add_action( 'init', 'create_versions_taxonomy' );
 /* CUSTOMISE CPTS/QUERIES */
 add_action( 'pre_get_posts', 'social_adjust_queries' );
 add_action( 'pre_get_posts', 'ecological_adjust_queries' );
+add_action( 'pre_get_posts', 'seven_ways_adjust_queries' );
 
 add_filter( 'pre_get_document_title', 'social_archive_title', 1000 );
 add_filter( 'pre_get_document_title', 'ecological_archive_title', 1000 );
@@ -132,6 +134,73 @@ function register_cpt_ecological() {
 	register_post_type( 'ecological', $args );
 }
 
+/**
+ * Create the 'seven-ways' cpt.
+ */
+function register_cpt_seven_ways() {
+
+	$labels = array(
+		'name'               => _x( 'Seven Ways', 'dtd' ),
+		'singular_name'      => _x( 'Way', 'dtd' ),
+		'add_new'            => _x( 'Add New Way', 'dtd' ),
+		'add_new_item'       => _x( 'Add New Way', 'dtd' ),
+		'edit_item'          => _x( 'Edit Way', 'dtd' ),
+		'new_item'           => _x( 'New Way', 'dtd' ),
+		'view_item'          => _x( 'View Way', 'dtd' ),
+		'search_items'       => _x( 'Search Seven Ways', 'dtd' ),
+		'not_found'          => _x( 'No Seven Ways found', 'dtd' ),
+		'not_found_in_trash' => _x( 'No Seven Ways found in Trash', 'dtd' ),
+		'parent_item_colon'  => _x( 'Parent Way:', 'dtd' ),
+		'menu_name'          => _x( 'Seven Ways', 'dtd' ),
+	);
+
+	$args = array(
+		'labels'          => $labels,
+		'description'     => 'Seven Ways',
+		'capability_type' => 'post',
+		'menu_icon'       => 'dashicons-format-status',
+		'public'          => true,
+		'has_archive'     => true,
+		'show_in_rest'    => true,
+		'template'        => array(
+			array(
+				'core/heading',
+				array(
+					'content' => 'Summary of Way',
+					'level'   => '2',
+				),
+			),
+			array(
+				'core/paragraph',
+				array(
+					'placeholder' => 'One line summary in bold',
+				),
+			),
+			array(
+				'core/heading',
+				array(
+					'content' => 'Relevance to digital tech',
+					'level'   => '2',
+				),
+			),
+			array(
+				'core/paragraph',
+				array(
+					'placeholder' => 'Explanation',
+				),
+			),
+		),
+		'supports'        => array( 'title', 'editor', 'excerpt', 'thumbnail' ),
+		'taxonomies'      => array( 'versions' ),
+		'rewrite'         => array(
+			'slug'       => 'seven-ways',
+			'with_front' => false,
+		),
+	);
+
+	register_post_type( 'seven-ways', $args );
+}
+
 
 
 /* REGISTER TAXONOMIES                   */
@@ -193,6 +262,20 @@ function social_adjust_queries( $query ) {
  * @param object $query The WP_Query instance (passed by reference).
  */
 function ecological_adjust_queries( $query ) {
+
+	if ( ! is_admin() ) {
+		$query->set( 'posts_per_page', '12' );
+		$query->set( 'orderby', 'title' );
+		$query->set( 'order', 'ASC' );
+	}
+}
+
+/**
+ * Adjust default seven ways CPT query.
+ *
+ * @param object $query The WP_Query instance (passed by reference).
+ */
+function seven_ways_adjust_queries( $query ) {
 
 	if ( ! is_admin() ) {
 		$query->set( 'posts_per_page', '12' );
