@@ -202,7 +202,9 @@ ul.list__seven-ways {
 /* 15. BLOCKS               */
 .entry-content > .has-background {
 	margin-top: var(--wp--custom--spacing--medium);
-	padding-bottom: var(--wp--custom--spacing--medium);
+	margin-bottom: var(--wp--custom--spacing--medium);
+	padding-top: 2rem;
+	padding-bottom: 2rem;
 }
 
 
